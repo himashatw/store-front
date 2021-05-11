@@ -22,7 +22,29 @@ const HomePage = () => {
             {/* row one */}
             <div className="home__row">
 
-                {
+                <Product
+                    id={"1"}
+                    title={"Green Cabin Nougat Crunch"}
+                    price={1500}
+                    category={"Cakes"}
+                    image={"https://cdn.takas.lk/media/catalog/product/cache/1/image/512x512/9df78eab33525d08d6e5fb8d27136e95/n/u/nugat_crunch_cake_1.png"}
+                />
+                <Product
+                    id={"1"}
+                    title={"Green Cabin Nougat Crunch"}
+                    price={1500}
+                    category={"Cakes"}
+                    image={"https://cdn.takas.lk/media/catalog/product/cache/1/image/512x512/9df78eab33525d08d6e5fb8d27136e95/n/u/nugat_crunch_cake_1.png"}
+                />
+                <Product
+                    id={"1"}
+                    title={"Green Cabin Nougat Crunch"}
+                    price={1500}
+                    category={"Cakes"}
+                    image={"https://cdn.takas.lk/media/catalog/product/cache/1/image/512x512/9df78eab33525d08d6e5fb8d27136e95/n/u/nugat_crunch_cake_1.png"}
+                />
+
+                {/* {
                     products.map((product) => (
                         <Product
                             id={product.itemId}
@@ -33,7 +55,7 @@ const HomePage = () => {
                             key={product.itemId}
                         />
                     ))
-                }
+                } */}
             </div>
 
             {/* row two */}
