@@ -18,7 +18,7 @@ const Payment = () => {
     }
 
     return (
-        <div className="App">
+        <div className="App" >
             <Stripe
                 stripeKey="pk_test_51IoQ2qLTLTjtyCAiMJOoTxiymEs2tXlKs1dylU2TnrNfcGGGk5lqssx5FUezwa4F3uWfiYzgBUZ4Cg9CuQMec0QW00gBzPGthB" token={handleToken} />
         </div>
