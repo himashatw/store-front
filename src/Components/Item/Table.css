@@ -1,0 +1,49 @@
+.items {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  
+  .items td, .items th {
+    border: 1px solid black;
+    padding: 8px;
+  }
+  
+  .items th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #62c76b;
+    color: rgb(255, 255, 255);
+  }
+.div_body{
+	margin-right:auto;
+	margin-left:auto;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+
+}
+.itemImage{
+    width: 10em;
+    height: 10em;
+}
+.item_deleteIcon{
+    background-color: red;
+}
+.item_editIcon{
+    background-color: #0dd1f3;
+}
+h2{
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.addItemDiv{
+    margin-left: 340px; 
+    border: 1px solid #4CAF50;
+    margin-block-end: auto;
+    margin-right: 1107px;
+     
+}
