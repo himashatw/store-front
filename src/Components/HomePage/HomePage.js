@@ -26,18 +26,6 @@ const HomePage = () => {
             {/* row one */}
             <div className="home__row">
                 {displayLoading && <h3>Loading data...</h3>}
-                {
-                    products.map((product) => (
-                        <Product
-                            id={product.itemId}
-                            title={product.itemName}
-                            price={product.itemPrice}
-                            category={product.itemCatagory}
-                            image={product.url}
-                            key={product.itemId}
-                        />
-                    ))
-                }
 
                 {
                     products.map((product) => (

@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 
 const Subtotal = () => {
     const [{ basket }] = useStateValue();
-    
+    const myTotal = 28880000;
     const toPayment = {
-        pathname: "/payment/23000",
+        pathname: `/payment/${myTotal}`,
         param1 : "Data1"
     }
     return (
