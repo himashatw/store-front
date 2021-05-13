@@ -4,7 +4,12 @@ import './App.css'
 import Payment from './Payment/Payement';
 import HomePage from './HomePage/HomePage'
 import Header from './Header/Header'
+
+import ListItem from './Item/ListItems';
+import AddItem from './Item/AddItem';
+import UpdateItem from './Item/UpdateItem';
 import Checkout from './Checkout/Checkout';
+
 
 
 function App() {
@@ -13,6 +18,14 @@ function App() {
       <div className="app">
         <Switch>
 
+          <Route exact path ="/items">
+            <Header/>
+            <ListItem/>
+          </Route>
+          <Route path ="/additem" component = {AddItem}>
+          </Route>
+          <Route path ="/updateitem/:id" component = {UpdateItem}>
+          </Route>
           <Route exact path="/login">
           </Route>
 

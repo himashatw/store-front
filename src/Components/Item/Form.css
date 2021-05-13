@@ -1,0 +1,89 @@
+.delBtn{
+    background-color: #ff0000; 
+    border:1px solid black;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.saveBtn{
+    background-color: #00ff4c; 
+    border:1px solid black;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.saveBtn_Effect{
+    background-color: white; 
+    color: black; 
+    border: 2px solid #00ff4c;
+}
+.saveBtn_Effect:hover{
+    background-color: #00ff4c;
+    color: rgb(0, 0, 0);
+}
+.delBtn_Effect{
+    background-color: white; 
+    color: black; 
+    border: 2px solid #ff0000;
+}
+.delBtn_Effect:hover{
+    background-color: #ff0000;
+    color: rgb(0, 0, 0);
+}
+input{
+	width:400px;
+    height: 30px;
+	margin-bottom:20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+	
+}
+.form-group{
+    border: black;
+    margin-right:auto;
+	margin-left:auto;
+}
+.card-body{
+    margin-right:auto;
+	margin-left:auto;
+    border: black;
+    
+
+}
+.container{
+    background-color: aliceblue;
+	border: 1px solid black;
+	color:#000;
+	position:sticky;
+	box-sizing:border-box;
+	width: fit-content;
+	padding:25px 20px;
+	margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+}
+label{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    
+}
+h3{
+    text-align: center;
+    font-size: 25px;
+    font-family: monospace;
+    margin-bottom: 10px;
+}
