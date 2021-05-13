@@ -2,8 +2,10 @@ import React from 'react'
 import Stripe from 'react-stripe-checkout'
 import axios from 'axios'
 
-const Payment = () => {
-
+const Payment = (props) => {
+    
+    console.log(props.match.params.subTotal);
+    console.log(props.location.param1);
     async function handleToken(token) {
         console.log(token); await axios.post("http://localhost:8080/api/payment/charge", "", {
             headers: {
