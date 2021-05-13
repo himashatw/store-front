@@ -42,7 +42,7 @@ const HomePage = () => {
 
             </div>
 
-            <h1>Category 2</h1>
+            <h1>Category Two</h1>
             {/* row two */}
             <div className="home__row">
                 {displayLoading && <h3>Loading data...</h3>}
