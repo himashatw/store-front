@@ -11,7 +11,8 @@ import UpdateItem from './Item/UpdateItem';
 import Checkout from './Checkout/Checkout';
 import Login from './Login/Login';
 import { useStateValue } from './StateProvider';
-
+import AddCardPayment from './Payment/AddCardPaymentComponent'
+import AddMobilePayment from './Payment/AddMobilePaymentComponent'
 
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
           {
             type: "SET_USER",
             user: null,
-            basket : []
+            basket: []
           }
         )
       }
@@ -43,7 +44,7 @@ function App() {
     }
   }, [])
 
-  console.log('USer iS',user);
+  console.log('USer iS', user);
 
   return (
     <Router>
@@ -71,11 +72,27 @@ function App() {
             (props) => (
               <Fragment>
                 <Header />
-                <Payment {...props} />
+                <AddCardPayment {...props} />
               </Fragment>
             )
           }
           >
+          </Route>
+
+          <Route exact path="/addMobilePayment/:subTotal"
+            render={
+              (props) => (
+                <Fragment>
+                  <Header />
+                  <AddMobilePayment {...props}/>
+                </Fragment>
+              )
+            }>
+          </Route>
+
+          <Route exact path="/addCardPayment">
+            <Header />
+            <AddCardPayment />
           </Route>
 
           <Route exact path="/">
