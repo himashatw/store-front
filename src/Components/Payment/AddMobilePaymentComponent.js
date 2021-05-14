@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PayementService from '../../services/payementService';
 import { withRouter } from 'react-router-dom';
+import payementService from '../../services/payementService';
 
 
 class AddMobilePaymentComponent extends Component {
@@ -9,7 +10,7 @@ class AddMobilePaymentComponent extends Component {
     constructor(props) {
 
         const myTotal = props.match.params.subTotal;
-        console.log("Mobile : "+myTotal);
+        console.log("Mobile : " + myTotal);
 
 
         super(props);
@@ -18,7 +19,7 @@ class AddMobilePaymentComponent extends Component {
 
             phoneNo: '',
             pinNo: '',
-            amount: '',
+            amount: props.match.params.subTotal
 
         }
 
@@ -44,26 +45,40 @@ class AddMobilePaymentComponent extends Component {
         console.log("Mobile Payement=>" + JSON.stringify(payement));
 
 
-        PayementService.addMobilePaymentDetails(payement).then(response => {
-            // this.props.history.push("/add-mobilePayment")
-            alert("Your payment was saved💯✅ .Check your E-Mail for more information❗.")
+        PayementService.addMobilePaymentDetails(payement)
+            .then(response => {
+                // this.props.history.push("/add-mobilePayment")
+                alert("Your payment has been saved successfully ✅ Please wait for the confirmation message ❗")
 
-        }).catch(err =>
-            alert("🔴 Please check again your payement details❗.")
+                PayementService.sendConfirmationMsg(this.state.amount, this.state.pinNo)
+                    .then(response => {
+                        alert("Confirmation Message sent successfully ✅")
+                    })
+                    .catch(err => {
+                        alert(err)
+                    })
 
-        );
+            }).catch(err =>
+                alert("🔴 Please check again your payement details ❗")
+
+            );
+
+
     }
 
     canceled = () => {
-        this.props.history.push("/addCardPayment");
+        var x = this.state.amount;
+        this.props.history.push(`/checkout`);
     }
 
     goToCardPayment = () => {
-        this.props.history.push("/addCardPayment");
+        var x = this.state.amount;
+        this.props.history.push(`/addCardPayment/${x}`);
     }
 
     goToMobilePayment = () => {
-        this.props.history.push("/addMobilePayment");
+        var x = this.state.amount;
+        this.props.history.push(`/addMobilePayment/${x}`);
     }
 
 
@@ -72,7 +87,8 @@ class AddMobilePaymentComponent extends Component {
             <div className="bg-img">
                 <div className="container">
                     <br></br>
-                    <center> <button className="btn btn-primary btn-lg btn-block " onClick={this.goToCardPayment}> Payment Via Credit Card </button>
+                    <center>
+                        <button className="btn btn-primary btn-lg btn-block " onClick={this.goToCardPayment}> Payment Via Credit Card </button>
                         <button className="btn btn-secondary btn-lg btn-block" onClick={this.goToMobilePayment} style={{ marginLeft: "10px" }}> Payment Via Mobile Phone   </button>
                     </center>
                     <center><h2 className="font1">Mobile <div className="font2">PAYMENTS</div></h2></center>

@@ -6,16 +6,17 @@ import '../Item/Form.css';
 class AddCardPaymentComponent extends Component {
 
     constructor(props) {
-      
+
         const myTotal = props.match.params.subTotal;
-        console.log("add card"+myTotal);
+        console.log("add card" + myTotal);
+
 
         super(props);
         this.state = {
             cardNo: '',
             name: '',
             cvcNo: '',
-            amount: ''
+            amount: props.match.params.subTotal
         }
 
 
@@ -27,7 +28,10 @@ class AddCardPaymentComponent extends Component {
         this.savePayment = this.savePayment.bind(this);
         // this.goToCardPayment = this.goToCardPayment.bind(this);
 
+
     }
+
+
     changeCardNumber = (event) => {
         this.setState({ cardNo: event.target.value });
     }
@@ -64,27 +68,32 @@ class AddCardPaymentComponent extends Component {
     }
 
     canceled = () => {
-        this.props.history.push("/addCardPayment");
+        var x = this.state.amount;
+        this.props.history.push(`/checkout`);
     }
 
     goToCardPayment = () => {
-        this.props.history.push("/addCardPayment");
+        var x = this.state.amount;
+        this.props.history.push(`/addCardPayment/${x}`);
     }
 
     goToMobilePayment = () => {
-        this.props.history.push("/addMobilePayment");
+
+        var x = this.state.amount;
+        this.props.history.push(`/addMobilePayment/${x}`);
+        console.log("@card pay" + x);
     }
 
 
     render() {
-        
+
         return (
             <div className="bg-img">
                 <div className="container">
                     <br></br>
                     <center>
 
-                            <button className="btn btn-primary btn-lg btn-block " onClick={this.goToCardPayment}> Payment Via Credit Card </button>
+                        <button className="btn btn-primary btn-lg btn-block " onClick={this.goToCardPayment}> Payment Via Credit Card </button>
 
 
 

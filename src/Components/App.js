@@ -90,9 +90,15 @@ function App() {
             }>
           </Route>
 
-          <Route exact path="/addCardPayment">
-            <Header />
-            <AddCardPayment />
+          <Route exact path="/addCardPayment/:subTotal"
+            render={
+              (props) => (
+                <Fragment>
+                  <Header />
+                  <AddCardPayment {...props} />
+                </Fragment>
+              )
+            }>
           </Route>
 
           <Route exact path="/">
