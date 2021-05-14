@@ -13,8 +13,8 @@ const Login = () => {
         event.preventDefault();
         auth.signInWithEmailAndPassword(email, password)
             .then((auth) => {
-                if (auth?.user.email === 'himashatw@gmail.com') {
-                    history.push("/payment/23344")
+                if (auth?.user.email === 'abishekmanusha@gmail.com') {
+                    history.push("/items")
                 } else {
                     history.push("/")
                 }
