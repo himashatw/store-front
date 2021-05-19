@@ -23,6 +23,33 @@
   background-color: #00e1ff;
   color: rgb(0, 0, 0);
 }
+
+.delibtn{
+  background-color: #dff708;
+  border: 1px solid black;
+  color: rgb(0, 0, 0);
+  padding: 10px 10px;;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-left: 300px;
+  border-radius: 5px;
+  
+}
+.delibtn_Effect{
+  background-color: white; 
+  color: black; 
+  border: 2px solid #00e1ff;
+}
+.delibtn_Effect:hover{
+  background-color: #00e1ff;
+  color: rgb(0, 0, 0);
+}
+
 .editBtn{
   background-color: #b9e02b; 
   border: 1px solid black;
@@ -118,5 +145,54 @@ h1{
 .div_body {
   background-color: white;
  
+}
+
+/*card button and Mobile button*/
+.cardBtn{
+  background-color: #8a8a91; 
+  border:1px solid black;
+  color: rgb(0, 0, 0);
+  padding:10px 20px;;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.cardBtn_Effect{
+  background-color: white; 
+  color: black; 
+  border: 2px solid #8a8a91;
+}
+.cardBtn_Effect:hover{
+  background-color: #8a8a91;
+  color: rgb(0, 0, 0);
+}
+
+.mobBtn{
+  background-color: #100cdf; 
+  border:1px solid black;
+  color: rgb(0, 0, 0);
+  padding:10px 20px;;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.mobBtn_Effect{
+  background-color: white; 
+  color: black; 
+  border: 2px solid #100cdf;
+}
+.mobBtn_Effect:hover{
+  background-color: #100cdf;
+  color: rgb(0, 0, 0);
 }
 

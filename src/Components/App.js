@@ -13,6 +13,7 @@ import Login from './Login/Login';
 import { useStateValue } from './StateProvider';
 import AddCardPayment from './Payment/AddCardPaymentComponent'
 import AddMobilePayment from './Payment/AddMobilePaymentComponent'
+import AddDeliveryDetails from './Delivery/AddDeliveryDetails'
 
 
 function App() {
@@ -67,12 +68,17 @@ function App() {
             <Header />
             <Checkout />
           </Route>
-
-          <Route exact path="/payment/:subTotal" render={
+          {/*edied
+          <Route exact path="/delivery">
+            <Header />
+            <AddDeliveryDetails />
+          </Route>
+          */}
+          <Route exact path="/delivery/:subTotal" render={
             (props) => (
               <Fragment>
                 <Header />
-                <AddCardPayment {...props} />
+                <AddDeliveryDetails {...props} />
               </Fragment>
             )
           }

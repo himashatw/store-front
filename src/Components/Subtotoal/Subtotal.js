@@ -9,7 +9,7 @@ const Subtotal = () => {
     const [{ basket }] = useStateValue();
     const myTotal = getBasketTotal(basket);
     const toPayment = {
-        pathname: `/payment/${myTotal}`,
+        pathname: `/delivery/${myTotal}`,
         param1 : "Data1"
     }
     return (
